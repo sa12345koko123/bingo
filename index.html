@@ -1,14 +1,73 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="ja">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>ビンゴゲーム 完成版</title>-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <script src="Bingo.js" defer></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div id="current-number">?</div>-->
+<!--    <button type="button" id="start-button">Go!!</button>-->
+<!--    <div id="result"></div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>ビンゴゲーム 完成版</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="Bingo.js" defer></script>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="Bingo.js"></script>
+<title>Bingo slot</title>
 </head>
 <body>
-    <div id="current-number">?</div>
-    <button type="button" id="start-button">Go!!</button>
-    <div id="result"></div>
+  <header>
+    <div class="inner">
+      <h1>BINGO SLOT</h1>
+    </div>
+  </header>
+  <nav class="menu">
+    <div class="inner">
+      <form name="setmenu">
+        <input type="text" name="dat" id="value" pattern="[1-9][0-9]" maxlength="2">
+        <button type="button" id="setBtn">SET</button>
+        <button type="button" id="resetBtn">RESET</button>
+      </form>
+    </div>
+  </nav>
+  <section class="main">
+    <div class="inner">
+      <div id="roulette"></div>
+      <form id="playBtn">
+        <button id="startBtn">START</button>
+        <button id="stopBtn">STOP</button>
+      </form>
+      <audio id="dramroll" preload="auto">
+        <source src="dramroll.mp3" type="audio/mp3">
+      </audio>
+      <audio id="pingpong" preload="auto">
+        <source src="pingpong.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </section>
+  <section class="listSec">
+    <div class="inner">
+      <div>
+        <ul class="clearfix" id="numList">
+        </ul>
+      </div>
+      <div>
+        <ul class="clearfix" id="result">
+        </ul>
+      </div>
+    </div>
+  </section>
+  <fotter>
+    <div class="inner">
+      <address>Copyright(c) --, Allright Reserved.</address>
+    </div>
+  </fotter>
 </body>
 </html>
